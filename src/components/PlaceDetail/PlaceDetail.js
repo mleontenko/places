@@ -2,8 +2,10 @@ import React from "react";
 import { Modal, View, Image, Text, Button, StyleSheet } from "react-native";
 
 const placeDetail = props => {
+  // Modal content je prvo prazan
   let modalContent = null;
 
+  // Ako je odabrano mjesto, modal content se puni sa podacima tog mjesta
   if (props.selectedPlace) {
     modalContent = (
       <View>
@@ -15,6 +17,7 @@ const placeDetail = props => {
   return (
     <Modal
       onRequestClose={props.onModalClosed}
+      // Vidljivost se regulira s obzirom da li je odabrano mjesto
       visible={props.selectedPlace !== null}
       animationType="slide"
     >

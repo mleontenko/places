@@ -3,7 +3,7 @@ import { createStore, combineReducers } from 'redux';
 import placesReducer from './reducers/places';
 
 const rootReducer = combineReducers({
-    olaces: placesReducer
+    places: placesReducer
 });
 
 const configureStore = () => {
